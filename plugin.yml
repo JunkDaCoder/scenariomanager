@@ -6,3 +6,5 @@ author: BoyIsDino
 commands:
     scenario:
          description: /scenario <add:remove>| <list>
+   finalheal:
+           description: /finalheal > scenario command
