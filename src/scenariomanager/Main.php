@@ -38,8 +38,8 @@ class Main extends PluginBase implements Listener {
        }
 	   if($args[0] == "add"){
                  if($sender->hasPermission("scenariomanager.add")) {
-					 if (strtolower($args[1] == ["cutclean", "autosmelt"])) {
-                        $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "cutclean")) {
+                        $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						$this->scenarios->set("cutclean", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -48,8 +48,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[1] == ["nofall", "no-fall"])) {
-						$sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "nofall")) {
+						$sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						$this->scenarios->set("no-fall", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -58,8 +58,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[1] == ["blooddiamond","blood-diamond"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "blooddiamond")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("blood-diamond", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -68,8 +68,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[1] == ["doubleores","double-ores"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "doubleores")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("double-ores", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -78,8 +78,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[1] == ["tripleores","triple-ores"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "tripleores")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("triple-ores", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -88,8 +88,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["catseyes","cats-eyes"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "catseyes")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("cats-eyes", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -98,8 +98,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["finalheal","final-heal"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "finalheal")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("final-heal", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -108,18 +108,9 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["flowerpower","flower-power"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
-						 $this->scenarios->set("flower-power", true);
-						 $this->scenarios->save();
-						 $this->scenarios->reload();
-						 if ($this->scenarios->get("flower-power") === true) {
-							 $sender->sendMessage(self::PREFIX . TF::RED . "That scenario is already on!");
-						 }
-					 }
 
-					 if (strtolower($args[2] == ["deathpole","death-pole"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "deathpole")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("death-pole", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -128,8 +119,8 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["lightsout","lights-out"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "lightsout")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("lights-out", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -138,18 +129,9 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["gunsnroses","guns-n-roses"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
-						 $this->scenarios->set("guns-n-roses", true);
-						 $this->scenarios->save();
-						 $this->scenarios->reload();
-						 if ($this->scenarios->get("guns-n-roses") === true) {
-							 $sender->sendMessage(self::PREFIX . TF::RED . "That scenario is already on!");
-						 }
-					 }
 
-					 if (strtolower($args[2] == "chicken")) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[1] == "chicken")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("chicken", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -158,18 +140,10 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["halfore","half-ore"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
-						 $this->scenarios->set("half-ore", true);
-						 $this->scenarios->save();
-						 $this->scenarios->reload();
-						 if ($this->scenarios->get("half-ore") === true) {
-							 $sender->sendMessage(self::PREFIX . TF::RED . "That scenario is already on!");
-						 }
-					 }
+	
 
-					 if (strtolower($args[2] == [ "goldenhead", "golden-head"])) {
-						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
+					 if (strtolower($args[2] == "goldenhead")) {
+						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[1]) . " successfully!");
 						 $this->scenarios->set("golden-head", true);
 						 $this->scenarios->save();
 						 $this->scenarios->reload();
@@ -181,12 +155,12 @@ class Main extends PluginBase implements Listener {
 					 $sender->sendMessage(TF::RED . "You do not have permission to run this command!");
 				 }
 	   } else {
-		  $sender->sendMessage(TF::RED . "ERROR: Could not find scenario: " . strtolower($args[2]) . "!");
+		  $sender->sendMessage(TF::RED . "ERROR: Could not find scenario: " . strtolower($args[1]) . "!");
 	   }
-		if($args[1] == "remove"){
+		if($args[0] == "remove"){
 			if($sender->hasPermission("scenariomanager.remove")) {
-				if (strtolower($args[2] == "cutclean")) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "cutclean")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("cutclean", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -195,8 +169,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["nofall", "no-fall"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "nofall")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("no-fall", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -205,8 +179,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["blooddiamond","blood-diamond"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "blooddiamond")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("blood-diamond", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -215,8 +189,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["doubleores","double-ores"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "doubleores")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("double-ores", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -225,8 +199,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["tripleores","triple-ores"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "tripleores")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("triple-ores", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -235,8 +209,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["catseyes","cats-eyes"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "catseyes")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("cats-eyes", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -245,8 +219,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["finalheal","final-heal"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "finalheal")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("final-heal", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -255,19 +229,10 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["flowerpower","flower-power"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
-					$this->scenarios->set("flower-power", false);
-					$this->scenarios->save();
-					$this->scenarios->reload();
-					if ($this->scenarios->get("flower-power") === false) {
-						$sender->sendMessage(self::PREFIX . TF::RED . "That scenario is already disabled!");
-					}
-				
-				}
 
-				if (strtolower($args[2] == ["deathpole","death-pole"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+
+				if (strtolower($args[1] == "deathpole")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("death-pole", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -276,8 +241,8 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["lightsout", "lights-out"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[2] == "lightsout")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("lights-out", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -286,18 +251,9 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["gunsnroses", "guns-n-roses"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
-					$this->scenarios->set("guns-n-roses", false);
-					$this->scenarios->save();
-					$this->scenarios->reload();
-					if ($this->scenarios->get("guns-n-roses") === false) {
-						$sender->sendMessage(self::PREFIX . TF::RED . "That scenario is already disabled!");
-					}
-				}
 
-				if (strtolower($args[2] == "chicken")) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "chicken")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("chicken", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -306,18 +262,10 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["halfore","half-ore"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
-					$this->scenarios->set("half-ore", false);
-					$this->scenarios->save();
-					$this->scenarios->reload();
-					if ($this->scenarios->get("half-ore") === false) {
-						$sender->sendMessage(self::PREFIX . TF::RED . "That scenario is already disabled!");
-					}
-				}
+	
 
-				if (strtolower($args[2] == ["goldenhead", "golden-head"])) {
-					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[2]) . " successfully!");
+				if (strtolower($args[1] == "goldenhead")) {
+					$sender->sendMessage(self::PREFIX . TF::GREEN . "Removed scenario: " . strtolower($args[1]) . " successfully!");
 					$this->scenarios->set("golden-head", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
@@ -330,7 +278,7 @@ class Main extends PluginBase implements Listener {
 			}
 
 		} else {
-			$sender->sendMessage(TF::RED . "ERROR: Could not find scenario: " . strtolower($args[2]) . "!");
+			$sender->sendMessage(TF::RED . "ERROR: Could not find scenario: " . strtolower($args[1]) . "!");
 		}
 	 	  }
 		  
