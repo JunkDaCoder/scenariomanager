@@ -36,9 +36,9 @@ class Main extends PluginBase implements Listener {
 		  if (count($args) === 0) {
            $sender->sendMessage(self::PREFIX . TF::RED . " Usage: /scenario <add|remove> <...> | <list>");
        }
-	   if($args[1] == "add"){
+	   if($args[0] == "add"){
                  if($sender->hasPermission("scenariomanager.add")) {
-					 if (strtolower($args[2] == ["cutclean", "autosmelt"])) {
+					 if (strtolower($args[1] == ["cutclean", "autosmelt"])) {
                         $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
 						$this->scenarios->set("cutclean", true);
 						 $this->scenarios->save();
@@ -48,7 +48,7 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["nofall", "no-fall"])) {
+					 if (strtolower($args[1] == ["nofall", "no-fall"])) {
 						$sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
 						$this->scenarios->set("no-fall", true);
 						 $this->scenarios->save();
@@ -58,7 +58,7 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["blooddiamond","blood-diamond"])) {
+					 if (strtolower($args[1] == ["blooddiamond","blood-diamond"])) {
 						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
 						 $this->scenarios->set("blood-diamond", true);
 						 $this->scenarios->save();
@@ -68,7 +68,7 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["doubleores","double-ores"])) {
+					 if (strtolower($args[1] == ["doubleores","double-ores"])) {
 						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
 						 $this->scenarios->set("double-ores", true);
 						 $this->scenarios->save();
@@ -78,7 +78,7 @@ class Main extends PluginBase implements Listener {
 						 }
 					 }
 
-					 if (strtolower($args[2] == ["tripleores","triple-ores"])) {
+					 if (strtolower($args[1] == ["tripleores","triple-ores"])) {
 						 $sender->sendMessage(self::PREFIX . TF::GREEN . "Added scenario: " . strtolower($args[2]) . " successfully!");
 						 $this->scenarios->set("triple-ores", true);
 						 $this->scenarios->save();
