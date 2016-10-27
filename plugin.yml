@@ -5,6 +5,7 @@ version: "1.0.0"
 author: BoyIsDino
 commands:
     scenario:
-         description: /scenario <add:remove>| <list>
+         description: /scenario <add:remove>
+   
    finalheal:
-           description: /finalheal scenario command
+          description: /finalheal scenario command
