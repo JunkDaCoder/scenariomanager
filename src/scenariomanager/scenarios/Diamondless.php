@@ -5,7 +5,7 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\utils\Config;
 use pocketmine\item\Item;
 use pocketmine\block\Block;
-class Diamondless {
+class Diamondless{
     private $plugin;
 
     public function __construct(Main $plugin)
@@ -27,7 +27,8 @@ class Diamondless {
         $this->scenarios = new Config($this->plugin->getDataFolder() . "scenarios.yml");
         if ($this->scenarios->get("diamondless") === true) {
             if ($id === Block::DIAMOND_ORE) {
-                $event->setDrops([Item::get(Item::AIR)]);
+                $event->getDrops($event->setDrops(array(Item::get(Item::AIR,0,1))));
+
             }
         }
 
