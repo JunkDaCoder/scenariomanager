@@ -19,9 +19,9 @@ class Main extends PluginBase implements Listener {
 			"no-fall" => false,
 			"blood-diamond" => false,
 			"double-ores" => false,
-            "triple-ores" => false,
-            "cats-eyes" => false,
-            "final-heal" => false,
+                        "triple-ores" => false,
+                        "cats-eyes" => false,
+                        "final-heal" => false,
 			"flower-power" => false,
 			"death-poles" => false,
 			"lights-out" => false,
@@ -336,5 +336,21 @@ class Main extends PluginBase implements Listener {
 			$sender->sendMessage(TF::RED . "ERROR: Could not find scenario: " . strtolower($args[2]) . "!");
 		}
 	 	  }
-	  }
+		  
+		      if (strtolower($command->getName() == "finalheal")) {
+            $this->scenarios = new Config($this->getDataFolder() . "scenarios.yml");
+            if ($this->scenarios->get("final-heal") == true) {
+                if ($sender->hasPermission("scenariomanager.finalheal")) {
+                    foreach ($this->getServer()->getOnlinePlayers() as $p) {
+                        $p->setHealth($p->getMaxHealth());
+                    }
+                    $this->getServer()->broadcastMessage(self::PREFIX . TF::BLUE . " FinalHeal was used and everyone was healed!");
+                } else {
+                    $sender->sendMessage(TF::RED . "You do not have permission to run this command!");
+                }
+            } else {
+                $sender->sendMessage(self::PREFIX . TF::RED . " > FinalHeal is not enabled!");
+            }
+        }
+    }
    }
