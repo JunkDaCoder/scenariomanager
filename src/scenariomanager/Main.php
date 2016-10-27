@@ -283,7 +283,7 @@ class Main extends PluginBase implements Listener {
 					}
 				}
 
-				if (strtolower($args[2] == ["halfore","half-ore")) {
+				if (strtolower($args[2] == ["halfore","half-ore"])) {
 					$this->scenarios->set("half-ore", false);
 					$this->scenarios->save();
 					$this->scenarios->reload();
