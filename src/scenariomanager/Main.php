@@ -14,10 +14,6 @@ class Main extends PluginBase implements Listener {
 	$this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
         @mkdir($this->getDataFolder()."scenarios/");
-         public function onEnable(){
-	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-        @mkdir($this->getDataFolder());
-        @mkdir($this->getDataFolder()."scenarios/");
         $this->scenarios = new Config($this->getDataFolder()."/scenarios.yml", Config::YAML, array(
 			"cutclean" => false,
 			"no-fall" => false,
