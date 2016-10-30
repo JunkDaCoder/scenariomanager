@@ -22,7 +22,7 @@ class LightsOut {
 		$id = $event->getBlock()->getId();
 		$this->scenarios = new Config($this->plugin->getDataFolder() . "scenarios.yml");
         if ($this->scenarios->get("lights-out") === true) {
-	if($id === [Block::TORCH, Block::REDSTONE_TORCH]){
+	if($id === Block::TORCH){
 		$event->setCancelled();
 		$p = $event->getPlayer();
 		$p->sendMessage(Main::PREFIX . TF::RED . "No Torches allowed in a lights-out game!");
